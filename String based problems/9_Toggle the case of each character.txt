@@ -1,0 +1,21 @@
+9.Toggle the case of each character
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                sb.append((char)(c - 32));
+            } else if (c >= 'A' && c <= 'Z') {
+                sb.append((char)(c + 32));
+            } else {
+                sb.append(c);
+            }
+        }
+        System.out.println("Toggled case: " + sb.toString());
+    }
+}

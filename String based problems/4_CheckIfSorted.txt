@@ -1,0 +1,18 @@
+Check if Sorted:
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner h=new Scanner(System.in);
+		int a=h.nextInt();
+		int arr[]=new int[a];
+		for(int i=0;i<arr.length;i++)
+		    arr[i]=h.nextInt();
+		boolean flag=false;
+		for(int i=0;i<arr.length-1;i++){
+		    if(arr[i]<arr[i+1])
+		       flag=true;
+		}
+		System.out.println(flag);
+	}
+}

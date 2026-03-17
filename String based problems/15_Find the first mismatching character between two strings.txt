@@ -1,0 +1,24 @@
+15.Find the first mismatching character between two strings
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+
+        int len = Math.min(s1.length(), s2.length());
+        for (int i = 0; i < len; i++) {
+            if (s1.charAt(i) != s2.charAt(i)) {
+                System.out.println("First mismatch at position " + (i+1) + ": '" + s1.charAt(i) + "' vs '" + s2.charAt(i) + "'");
+                return;
+            }
+        }
+        if (s1.length() != s2.length()) {
+            System.out.println("Strings differ in length. First mismatch at position " + (len+1));
+        } else {
+            System.out.println("Strings are equal");
+        }
+    }
+}

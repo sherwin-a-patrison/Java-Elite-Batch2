@@ -1,0 +1,21 @@
+10.Replace all vowels with *
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String s = sc.nextLine();
+        String vowels = "aeiouAEIOU";
+        StringBuilder sb = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (vowels.indexOf(c) != -1) {
+                sb.append('*');
+            } else {
+                sb.append(c);
+            }
+        }
+        System.out.println(sb.toString());
+    }
+}

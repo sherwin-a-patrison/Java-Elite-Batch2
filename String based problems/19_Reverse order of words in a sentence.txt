@@ -1,0 +1,25 @@
+19. Reverse order of words in a sentence
+
+class Solution {
+    public String reverseWords(String s) {
+        // trim leading and trailing spaces
+        s = s.trim();
+        
+        // split by one or more spaces
+        String[] words = s.split("\\s+");
+        
+        // reverse words
+        int left = 0, right = words.length - 1;
+        while (left < right) {
+            String temp = words[left];
+            words[left] = words[right];
+            words[right] = temp;
+            
+            left++;
+            right--;
+        }
+        
+        // join with single space
+        return String.join(" ", words);
+    }
+}

@@ -1,0 +1,17 @@
+4. Lowercase Count
+
+
+import java.util.Scanner;
+
+public class LowercaseCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int lowerCount = 0;
+        String s = sc.nextLine();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch >= 'a' && ch <= 'z') lowerCount++;
+        }
+        System.out.println("Lowercase: " + lowerCount);
+    }
+}
